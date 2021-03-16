@@ -114,7 +114,7 @@ SELECT cities.city, cities.state, cities.population_estimate_2018 FROM cities WH
 */
 
 -- your query here
-
+SELECT cities.city, cities.state, cities.population_estimate_2018 FROM cities WHERE city LIKE 'S%';
 \echo ========= Problem 3.8 ====================================================
 \echo
 /*
@@ -125,7 +125,7 @@ SELECT cities.city, cities.state, cities.population_estimate_2018 FROM cities WH
 */
 
 -- your query here
-
+SELECT cities.city, cities.land_area_sq_mi_2016, cities.population_estimate_2018 FROM cities WHERE land_area_sq_mi_2016 > 400 OR population_estimate_2018 > 2000000; 
 \echo ========= Problem 3.9 ====================================================
 \echo
 /*
@@ -136,7 +136,7 @@ SELECT cities.city, cities.state, cities.population_estimate_2018 FROM cities WH
 */
 
 -- your query here
-
+SELECT cities.city, cities.land_area_sq_mi_2016, cities.population_estimate_2018 FROM cities WHERE (land_area_sq_mi_2016 > 400 AND NOT population_estimate_2018 > 2000000) OR population_estimate_2018 > 2000000 AND NOT land_area_sq_mi_2016 > 400;
 \echo ========= Problem 3.10 ===================================================
 \echo
 /*
@@ -147,7 +147,7 @@ SELECT cities.city, cities.state, cities.population_estimate_2018 FROM cities WH
 */
 
 -- your query here
-
+SELECT cities.city, cities.population_estimate_2018, cities.population_census_2010 FROM cities WHERE (population_estimate_2018 - population_census_2010) > 200000;
 ---- Phase 4: Use a JOIN operation ---------------------------------------------
 -- Retrieve rows from multiple tables joining on a foreign key.
 -- The "airports" table has a foreign key called city_id that references the id
@@ -162,7 +162,7 @@ SELECT cities.city, cities.state, cities.population_estimate_2018 FROM cities WH
 */
 
 -- your query here
-
+SELECT cities.city, cities.id, airports.city_id, airports.name FROM cities JOIN airports ON (cities.id = airports.city_id);
 \echo ========= Problem 4.2 ====================================================
 \echo
 /*
