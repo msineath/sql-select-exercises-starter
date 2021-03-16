@@ -228,7 +228,10 @@ B.3) Decimals and Rounding: Refactor Phase 3, Query #5 to turn number of
 */
 
 -- your query here
-
+SELECT 
+     ROUND((cities.population_estimate_2018), 2) / 1000000 AS Rounded
+     FROM cities 
+     WHERE state = 'Texas';
 \echo ========= Problem B.4 ====================================================
 \echo
 /*
