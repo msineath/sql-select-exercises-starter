@@ -174,7 +174,14 @@ SELECT cities.city, cities.id, airports.city_id, airports.name FROM cities JOIN 
 */
 
 -- your query here
+SELECT 
+     COUNT(cities.city) 
+     FROM cities 
+     JOIN airports 
+     ON (cities.id = airports.city_id) 
+     WHERE city = 'New York';
 
+-- 
 --------------------------------------------------------------------------------
 ---- Bonuses:
 --------------------------------------------------------------------------------
