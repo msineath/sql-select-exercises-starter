@@ -199,7 +199,7 @@ B.1) Apostrophe: Write a SQL query to get all three ID codes (the Federal
 */
 
 -- your query here
-
+SELECT airports.FAA_id, airports.IATA_id, airports.ICAO_id, airports.name FROM airports WHERE name = 'Chicago O''Hare International Airport'; 
 \echo ========= Problem B.2 ====================================================
 \echo
 /*
@@ -212,7 +212,7 @@ B.2) Formatting Commas: Refactor Phase 2, Query #1 to turn the INT for estimated
 */
 
 -- your query here
-
+SELECT TO_CHAR(cities.population_estimate_2018, '999,999,999') FROM cities;
 \echo ========= Problem B.3 ====================================================
 \echo
 /*
