@@ -31,7 +31,7 @@
 */
 
 -- your query here
-
+SELECT cities.city, cities.state, cities.population_estimate_2018 FROM cities;
 \echo ========= Problem 2.2 ====================================================
 \echo
 /*
@@ -40,7 +40,7 @@
 */
 
 -- your query here
-
+SELECT airports.name FROM airports;
 ---- Phase 3: Add WHERE clauses ------------------------------------------------
 -- Select specific rows from a table using WHERE and common operators.
 --------------------------------------------------------------------------------
@@ -52,7 +52,7 @@
 */
 
 -- your query here
-
+SELECT cities.population_estimate_2018 FROM cities WHERE city = 'San Diego'; 
 \echo ========= Problem 3.2 ====================================================
 \echo
 /*
